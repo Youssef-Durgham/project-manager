@@ -1,9 +1,11 @@
 'use client';
 
 import { useState, useEffect, useRef, useCallback } from 'react';
-import { Task, Criteria, PRIORITY_CONFIG, MOCKUP_MODE_LABELS, MockupMode, FileAttachment, Comment } from '@/lib/types';
+import { Task, TaskStatus, Criteria, PRIORITY_CONFIG, MOCKUP_MODE_LABELS, MockupMode, FileAttachment, Comment } from '@/lib/types';
 import StatusBadge from './StatusBadge';
 import { useAuth } from '@/lib/AuthContext';
+
+const TASK_STATUS_ORDER: TaskStatus[] = ["draft", "ready", "waiting", "in-progress", "review", "revision", "approved", "done"];
 
 interface TaskDetailProps {
   task: Task;
@@ -66,6 +68,7 @@ export default function TaskDetail({ task, projectId, allTasks, onClose, onUpdat
   const [showDepPicker, setShowDepPicker] = useState(false);
   const [activeSection, setActiveSection] = useState<'details' | 'mockups' | 'files' | 'comments'>('details');
   const [expandedMockup, setExpandedMockup] = useState<string | null>(null);
+  const [showStatusDropdown, setShowStatusDropdown] = useState(false);
 
   // File upload state
   const [uploading, setUploading] = useState(false);
@@ -289,7 +292,7 @@ export default function TaskDetail({ task, projectId, allTasks, onClose, onUpdat
 
   return (
     <div className="fixed inset-0 bg-black/70 backdrop-blur-md z-50 flex items-end sm:items-center justify-center animate-fade-in" onClick={onClose}>
-      <div className="w-full max-w-lg lg:max-w-3xl max-h-[92vh] bg-[#0c1222] border border-slate-700/40 rounded-t-3xl sm:rounded-2xl overflow-hidden animate-slide-up" onClick={e => e.stopPropagation()}>
+      <div className="w-full max-w-lg lg:max-w-3xl max-h-[92vh] bg-[#0c1222] border border-slate-700/40 rounded-t-3xl sm:rounded-2xl overflow-hidden animate-slide-up" onClick={e => { e.stopPropagation(); if (showStatusDropdown) setShowStatusDropdown(false); }}>
 
         
         {/* Header */}
@@ -310,7 +313,22 @@ export default function TaskDetail({ task, projectId, allTasks, onClose, onUpdat
                 </h2>
               )}
               <div className="flex items-center gap-2 mt-2 flex-wrap">
-                <StatusBadge status={task.status} size="md" />
+                <div className="relative">
+                  <StatusBadge status={task.status} size="md" onClick={() => setShowStatusDropdown(!showStatusDropdown)} />
+                  {showStatusDropdown && (
+                    <div className="absolute left-0 top-8 z-50 glass-card rounded-xl shadow-2xl shadow-black/40 py-1 min-w-[160px] animate-scale-in">
+                      {TASK_STATUS_ORDER.map(s => (
+                        <button key={s} onClick={() => { updateTask({ status: s }); setShowStatusDropdown(false); }}
+                          className={`w-full text-left px-3 py-2 text-[12px] hover:bg-white/[0.04] transition-colors flex items-center gap-2 ${
+                            task.status === s ? "text-indigo-400" : "text-slate-400"
+                          }`}>
+                          <StatusBadge status={s} />
+                          {task.status === s && <span className="ml-auto text-indigo-400 text-[10px]">✓</span>}
+                        </button>
+                      ))}
+                    </div>
+                  )}
+                </div>
                 <span className={`text-[10px] px-2 py-[3px] rounded-md border font-medium ${
                   task.priority === 'critical' ? 'bg-rose-500/10 text-rose-300 border-rose-500/20' :
                   task.priority === 'high' ? 'bg-red-500/10 text-red-300 border-red-500/20' :
