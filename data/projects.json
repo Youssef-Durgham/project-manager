@@ -1,0 +1,170 @@
+[
+  {
+    "id": "auib-ticket-system",
+    "name": "AUIB Ticket System",
+    "description": "نظام تذاكر الدعم الفني لجامعة AUIB - يشمل تطبيق موبايل ولوحة تحكم ويب وباكند",
+    "techStack": ["Next.js", "React Native", "Node.js", "MongoDB", "Tailwind CSS"],
+    "type": "fullstack",
+    "components": [
+      {
+        "id": "comp-dashboard",
+        "name": "لوحة التحكم",
+        "icon": "🖥️",
+        "phases": [
+          {
+            "id": "phase-dash-1",
+            "name": "UI Foundation",
+            "description": "Build the base layout, navigation, and authentication screens",
+            "componentId": "comp-dashboard",
+            "order": 1,
+            "tasks": [
+              {
+                "id": "task-1",
+                "title": "Setup Next.js project with auth",
+                "description": "Initialize Next.js project with NextAuth, Tailwind, and base layout",
+                "status": "done",
+                "notes": ["Project initialized with TypeScript + Tailwind", "NextAuth configured with credentials provider"],
+                "createdAt": "2025-01-15T10:00:00Z",
+                "updatedAt": "2025-01-16T14:30:00Z"
+              },
+              {
+                "id": "task-2",
+                "title": "Dashboard overview page",
+                "description": "Main dashboard with ticket stats, charts, and recent activity",
+                "status": "in-progress",
+                "notes": ["Stats cards done", "Working on charts"],
+                "createdAt": "2025-01-16T10:00:00Z",
+                "updatedAt": "2025-01-18T09:00:00Z"
+              },
+              {
+                "id": "task-3",
+                "title": "Ticket management table",
+                "description": "Sortable, filterable table for all tickets with bulk actions",
+                "status": "ready",
+                "notes": [],
+                "createdAt": "2025-01-17T10:00:00Z",
+                "updatedAt": "2025-01-17T10:00:00Z"
+              }
+            ]
+          },
+          {
+            "id": "phase-dash-2",
+            "name": "Advanced Features",
+            "description": "Real-time updates, notifications, and reporting",
+            "componentId": "comp-dashboard",
+            "order": 2,
+            "tasks": [
+              {
+                "id": "task-4",
+                "title": "Real-time ticket updates",
+                "description": "WebSocket integration for live ticket status changes",
+                "status": "waiting",
+                "notes": [],
+                "createdAt": "2025-01-18T10:00:00Z",
+                "updatedAt": "2025-01-18T10:00:00Z"
+              },
+              {
+                "id": "task-5",
+                "title": "Analytics & Reports",
+                "description": "Generate reports on ticket resolution times, categories, etc.",
+                "status": "waiting",
+                "notes": [],
+                "createdAt": "2025-01-18T10:00:00Z",
+                "updatedAt": "2025-01-18T10:00:00Z"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "comp-mobile",
+        "name": "تطبيق الموبايل",
+        "icon": "📱",
+        "phases": [
+          {
+            "id": "phase-mob-1",
+            "name": "Core App",
+            "description": "React Native app with navigation, auth, and ticket submission",
+            "componentId": "comp-mobile",
+            "order": 1,
+            "tasks": [
+              {
+                "id": "task-6",
+                "title": "React Native project setup",
+                "description": "Initialize Expo project with navigation and theming",
+                "status": "done",
+                "notes": ["Using Expo Router", "Dark theme configured"],
+                "createdAt": "2025-01-15T10:00:00Z",
+                "updatedAt": "2025-01-15T18:00:00Z"
+              },
+              {
+                "id": "task-7",
+                "title": "Ticket submission flow",
+                "description": "Form to submit new tickets with category selection and image upload",
+                "status": "ready",
+                "notes": [],
+                "createdAt": "2025-01-16T10:00:00Z",
+                "updatedAt": "2025-01-16T10:00:00Z"
+              },
+              {
+                "id": "task-8",
+                "title": "My Tickets view",
+                "description": "List of user's submitted tickets with status tracking",
+                "status": "waiting",
+                "notes": [],
+                "createdAt": "2025-01-17T10:00:00Z",
+                "updatedAt": "2025-01-17T10:00:00Z"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "comp-backend",
+        "name": "Backend API",
+        "icon": "⚙️",
+        "phases": [
+          {
+            "id": "phase-back-1",
+            "name": "API Foundation",
+            "description": "RESTful API with authentication, ticket CRUD, and file uploads",
+            "componentId": "comp-backend",
+            "order": 1,
+            "tasks": [
+              {
+                "id": "task-9",
+                "title": "Express + MongoDB setup",
+                "description": "Initialize Express server with MongoDB connection and models",
+                "status": "done",
+                "notes": ["Using Mongoose", "Models: User, Ticket, Category"],
+                "createdAt": "2025-01-14T10:00:00Z",
+                "updatedAt": "2025-01-14T16:00:00Z"
+              },
+              {
+                "id": "task-10",
+                "title": "Ticket CRUD endpoints",
+                "description": "Full CRUD for tickets with validation and error handling",
+                "status": "done",
+                "notes": ["All endpoints tested", "Pagination added"],
+                "createdAt": "2025-01-14T16:00:00Z",
+                "updatedAt": "2025-01-15T12:00:00Z"
+              },
+              {
+                "id": "task-11",
+                "title": "File upload service",
+                "description": "S3-compatible file upload for ticket attachments",
+                "status": "in-progress",
+                "notes": ["Using MinIO for local dev"],
+                "createdAt": "2025-01-16T10:00:00Z",
+                "updatedAt": "2025-01-18T10:00:00Z"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "status": "active",
+    "createdAt": "2025-01-14T08:00:00Z",
+    "updatedAt": "2025-01-18T10:00:00Z"
+  }
+]

@@ -1,0 +1,428 @@
+▲ Next.js 16.1.6 (Turbopack)
+- Local:         http://localhost:3001
+- Network:       http://192.168.1.57:3001
+- Environments: .env.local
+
+✓ Starting...
+✓ Ready in 1385ms
+ GET / 200 in 1275ms (compile: 1098ms, render: 177ms)
+ GET /api/projects 200 in 854ms (compile: 777ms, render: 77ms)
+ POST /api/seed 200 in 84ms (compile: 48ms, render: 36ms)
+ GET /api/projects 200 in 14ms (compile: 3ms, render: 11ms)
+ GET /project/new 200 in 148ms (compile: 120ms, render: 28ms)
+ GET / 200 in 41ms (compile: 3ms, render: 38ms)
+ GET /api/projects 200 in 15ms (compile: 4ms, render: 11ms)
+ GET /project/auib-ticket-system 200 in 497ms (compile: 475ms, render: 22ms)
+Error fetching project: CastError: Cast to ObjectId failed for value "auib-ticket-system" (type string) at path "_id" for model "Project"
+    at async GET (src\app\api\projects\[id]\route.ts:10:21)
+   8 |     await connectDB();
+   9 |     const { id } = await params;
+> 10 |     const project = await Project.findOne({ $or: [{ slug: id }, { _id: id }] });
+     |                     ^
+  11 |     if (!project) {
+  12 |       return NextResponse.json({ success: false, error: 'Project not found' }, { status: 404 });
+  13 |     } {
+  stringValue: '"auib-ticket-system"',
+  messageFormat: undefined,
+  kind: 'ObjectId',
+  value: 'auib-ticket-system',
+  path: '_id',
+  reason: BSONError: input must be a 24 character hex string, 12 byte Uint8Array, or an integer
+      at async GET (src\app\api\projects\[id]\route.ts:10:21)
+     8 |     await connectDB();
+     9 |     const { id } = await params;
+  > 10 |     const project = await Project.findOne({ $or: [{ slug: id }, { _id: id }] });
+       |                     ^
+    11 |     if (!project) {
+    12 |       return NextResponse.json({ success: false, error: 'Project not found' }, { status: 404 });
+    13 |     },
+  valueType: 'string'
+}
+ GET /api/projects/auib-ticket-system 500 in 1221ms (compile: 977ms, render: 244ms)
+Error fetching project: CastError: Cast to ObjectId failed for value "auib-ticket-system" (type string) at path "_id" for model "Project"
+    at async GET (src\app\api\projects\[id]\route.ts:10:21)
+   8 |     await connectDB();
+   9 |     const { id } = await params;
+> 10 |     const project = await Project.findOne({ $or: [{ slug: id }, { _id: id }] });
+     |                     ^
+  11 |     if (!project) {
+  12 |       return NextResponse.json({ success: false, error: 'Project not found' }, { status: 404 });
+  13 |     } {
+  stringValue: '"auib-ticket-system"',
+  messageFormat: undefined,
+  kind: 'ObjectId',
+  value: 'auib-ticket-system',
+  path: '_id',
+  reason: BSONError: input must be a 24 character hex string, 12 byte Uint8Array, or an integer
+      at async GET (src\app\api\projects\[id]\route.ts:10:21)
+     8 |     await connectDB();
+     9 |     const { id } = await params;
+  > 10 |     const project = await Project.findOne({ $or: [{ slug: id }, { _id: id }] });
+       |                     ^
+    11 |     if (!project) {
+    12 |       return NextResponse.json({ success: false, error: 'Project not found' }, { status: 404 });
+    13 |     },
+  valueType: 'string'
+}
+ GET /api/projects/auib-ticket-system 500 in 132ms (compile: 8ms, render: 124ms)
+⚠ Fast Refresh had to perform a full reload due to a runtime error.
+✓ Compiled in 41ms
+ GET /project/auib-ticket-system 200 in 206ms (compile: 87ms, render: 119ms)
+Error fetching project: CastError: Cast to ObjectId failed for value "auib-ticket-system" (type string) at path "_id" for model "Project"
+    at async GET (src\app\api\projects\[id]\route.ts:10:21)
+   8 |     await connectDB();
+   9 |     const { id } = await params;
+> 10 |     const project = await Project.findOne({ $or: [{ slug: id }, { _id: id }] });
+     |                     ^
+  11 |     if (!project) {
+  12 |       return NextResponse.json({ success: false, error: 'Project not found' }, { status: 404 });
+  13 |     } {
+  stringValue: '"auib-ticket-system"',
+  messageFormat: undefined,
+  kind: 'ObjectId',
+  value: 'auib-ticket-system',
+  path: '_id',
+  reason: BSONError: input must be a 24 character hex string, 12 byte Uint8Array, or an integer
+      at async GET (src\app\api\projects\[id]\route.ts:10:21)
+     8 |     await connectDB();
+     9 |     const { id } = await params;
+  > 10 |     const project = await Project.findOne({ $or: [{ slug: id }, { _id: id }] });
+       |                     ^
+    11 |     if (!project) {
+    12 |       return NextResponse.json({ success: false, error: 'Project not found' }, { status: 404 });
+    13 |     },
+  valueType: 'string'
+}
+ GET /api/projects/auib-ticket-system 500 in 163ms (compile: 10ms, render: 153ms)
+⚠ Fast Refresh had to perform a full reload due to a runtime error.
+✓ Compiled in 32ms
+ GET /project/auib-ticket-system 200 in 164ms (compile: 76ms, render: 87ms)
+Error fetching project: CastError: Cast to ObjectId failed for value "auib-ticket-system" (type string) at path "_id" for model "Project"
+    at async GET (src\app\api\projects\[id]\route.ts:10:21)
+   8 |     await connectDB();
+   9 |     const { id } = await params;
+> 10 |     const project = await Project.findOne({ $or: [{ slug: id }, { _id: id }] });
+     |                     ^
+  11 |     if (!project) {
+  12 |       return NextResponse.json({ success: false, error: 'Project not found' }, { status: 404 });
+  13 |     } {
+  stringValue: '"auib-ticket-system"',
+  messageFormat: undefined,
+  kind: 'ObjectId',
+  value: 'auib-ticket-system',
+  path: '_id',
+  reason: BSONError: input must be a 24 character hex string, 12 byte Uint8Array, or an integer
+      at async GET (src\app\api\projects\[id]\route.ts:10:21)
+     8 |     await connectDB();
+     9 |     const { id } = await params;
+  > 10 |     const project = await Project.findOne({ $or: [{ slug: id }, { _id: id }] });
+       |                     ^
+    11 |     if (!project) {
+    12 |       return NextResponse.json({ success: false, error: 'Project not found' }, { status: 404 });
+    13 |     },
+  valueType: 'string'
+}
+ GET /api/projects/auib-ticket-system 500 in 136ms (compile: 8ms, render: 128ms)
+⚠ Fast Refresh had to perform a full reload due to a runtime error.
+✓ Compiled in 31ms
+ GET /project/auib-ticket-system 200 in 156ms (compile: 72ms, render: 84ms)
+Error fetching project: CastError: Cast to ObjectId failed for value "auib-ticket-system" (type string) at path "_id" for model "Project"
+    at async GET (src\app\api\projects\[id]\route.ts:10:21)
+   8 |     await connectDB();
+   9 |     const { id } = await params;
+> 10 |     const project = await Project.findOne({ $or: [{ slug: id }, { _id: id }] });
+     |                     ^
+  11 |     if (!project) {
+  12 |       return NextResponse.json({ success: false, error: 'Project not found' }, { status: 404 });
+  13 |     } {
+  stringValue: '"auib-ticket-system"',
+  messageFormat: undefined,
+  kind: 'ObjectId',
+  value: 'auib-ticket-system',
+  path: '_id',
+  reason: BSONError: input must be a 24 character hex string, 12 byte Uint8Array, or an integer
+      at async GET (src\app\api\projects\[id]\route.ts:10:21)
+     8 |     await connectDB();
+     9 |     const { id } = await params;
+  > 10 |     const project = await Project.findOne({ $or: [{ slug: id }, { _id: id }] });
+       |                     ^
+    11 |     if (!project) {
+    12 |       return NextResponse.json({ success: false, error: 'Project not found' }, { status: 404 });
+    13 |     },
+  valueType: 'string'
+}
+ GET /api/projects/auib-ticket-system 500 in 138ms (compile: 9ms, render: 130ms)
+⚠ Fast Refresh had to perform a full reload due to a runtime error.
+✓ Compiled in 34ms
+ GET /project/auib-ticket-system 200 in 181ms (compile: 83ms, render: 98ms)
+Error fetching project: CastError: Cast to ObjectId failed for value "auib-ticket-system" (type string) at path "_id" for model "Project"
+    at async GET (src\app\api\projects\[id]\route.ts:10:21)
+   8 |     await connectDB();
+   9 |     const { id } = await params;
+> 10 |     const project = await Project.findOne({ $or: [{ slug: id }, { _id: id }] });
+     |                     ^
+  11 |     if (!project) {
+  12 |       return NextResponse.json({ success: false, error: 'Project not found' }, { status: 404 });
+  13 |     } {
+  stringValue: '"auib-ticket-system"',
+  messageFormat: undefined,
+  kind: 'ObjectId',
+  value: 'auib-ticket-system',
+  path: '_id',
+  reason: BSONError: input must be a 24 character hex string, 12 byte Uint8Array, or an integer
+      at async GET (src\app\api\projects\[id]\route.ts:10:21)
+     8 |     await connectDB();
+     9 |     const { id } = await params;
+  > 10 |     const project = await Project.findOne({ $or: [{ slug: id }, { _id: id }] });
+       |                     ^
+    11 |     if (!project) {
+    12 |       return NextResponse.json({ success: false, error: 'Project not found' }, { status: 404 });
+    13 |     },
+  valueType: 'string'
+}
+ GET /api/projects/auib-ticket-system 500 in 158ms (compile: 7ms, render: 151ms)
+⚠ Fast Refresh had to perform a full reload due to a runtime error.
+✓ Compiled in 31ms
+ GET /project/auib-ticket-system 200 in 166ms (compile: 79ms, render: 87ms)
+Error fetching project: CastError: Cast to ObjectId failed for value "auib-ticket-system" (type string) at path "_id" for model "Project"
+    at async GET (src\app\api\projects\[id]\route.ts:10:21)
+   8 |     await connectDB();
+   9 |     const { id } = await params;
+> 10 |     const project = await Project.findOne({ $or: [{ slug: id }, { _id: id }] });
+     |                     ^
+  11 |     if (!project) {
+  12 |       return NextResponse.json({ success: false, error: 'Project not found' }, { status: 404 });
+  13 |     } {
+  stringValue: '"auib-ticket-system"',
+  messageFormat: undefined,
+  kind: 'ObjectId',
+  value: 'auib-ticket-system',
+  path: '_id',
+  reason: BSONError: input must be a 24 character hex string, 12 byte Uint8Array, or an integer
+      at async GET (src\app\api\projects\[id]\route.ts:10:21)
+     8 |     await connectDB();
+     9 |     const { id } = await params;
+  > 10 |     const project = await Project.findOne({ $or: [{ slug: id }, { _id: id }] });
+       |                     ^
+    11 |     if (!project) {
+    12 |       return NextResponse.json({ success: false, error: 'Project not found' }, { status: 404 });
+    13 |     },
+  valueType: 'string'
+}
+ GET /api/projects/auib-ticket-system 500 in 138ms (compile: 8ms, render: 130ms)
+ GET /project/auib-ticket-system 200 in 51ms (compile: 16ms, render: 35ms)
+Error fetching project: CastError: Cast to ObjectId failed for value "auib-ticket-system" (type string) at path "_id" for model "Project"
+    at async GET (src\app\api\projects\[id]\route.ts:10:21)
+   8 |     await connectDB();
+   9 |     const { id } = await params;
+> 10 |     const project = await Project.findOne({ $or: [{ slug: id }, { _id: id }] });
+     |                     ^
+  11 |     if (!project) {
+  12 |       return NextResponse.json({ success: false, error: 'Project not found' }, { status: 404 });
+  13 |     } {
+  stringValue: '"auib-ticket-system"',
+  messageFormat: undefined,
+  kind: 'ObjectId',
+  value: 'auib-ticket-system',
+  path: '_id',
+  reason: BSONError: input must be a 24 character hex string, 12 byte Uint8Array, or an integer
+      at async GET (src\app\api\projects\[id]\route.ts:10:21)
+     8 |     await connectDB();
+     9 |     const { id } = await params;
+  > 10 |     const project = await Project.findOne({ $or: [{ slug: id }, { _id: id }] });
+       |                     ^
+    11 |     if (!project) {
+    12 |       return NextResponse.json({ success: false, error: 'Project not found' }, { status: 404 });
+    13 |     },
+  valueType: 'string'
+}
+ GET /api/projects/auib-ticket-system 500 in 143ms (compile: 8ms, render: 135ms)
+⚠ Fast Refresh had to perform a full reload due to a runtime error.
+✓ Compiled in 28ms
+ GET /project/auib-ticket-system 200 in 169ms (compile: 79ms, render: 90ms)
+Error fetching project: CastError: Cast to ObjectId failed for value "auib-ticket-system" (type string) at path "_id" for model "Project"
+    at async GET (src\app\api\projects\[id]\route.ts:10:21)
+   8 |     await connectDB();
+   9 |     const { id } = await params;
+> 10 |     const project = await Project.findOne({ $or: [{ slug: id }, { _id: id }] });
+     |                     ^
+  11 |     if (!project) {
+  12 |       return NextResponse.json({ success: false, error: 'Project not found' }, { status: 404 });
+  13 |     } {
+  stringValue: '"auib-ticket-system"',
+  messageFormat: undefined,
+  kind: 'ObjectId',
+  value: 'auib-ticket-system',
+  path: '_id',
+  reason: BSONError: input must be a 24 character hex string, 12 byte Uint8Array, or an integer
+      at async GET (src\app\api\projects\[id]\route.ts:10:21)
+     8 |     await connectDB();
+     9 |     const { id } = await params;
+  > 10 |     const project = await Project.findOne({ $or: [{ slug: id }, { _id: id }] });
+       |                     ^
+    11 |     if (!project) {
+    12 |       return NextResponse.json({ success: false, error: 'Project not found' }, { status: 404 });
+    13 |     },
+  valueType: 'string'
+}
+ GET /api/projects/auib-ticket-system 500 in 175ms (compile: 8ms, render: 167ms)
+ GET /project/auib-ticket-system 200 in 45ms (compile: 7ms, render: 37ms)
+Error fetching project: CastError: Cast to ObjectId failed for value "auib-ticket-system" (type string) at path "_id" for model "Project"
+    at async GET (src\app\api\projects\[id]\route.ts:10:21)
+   8 |     await connectDB();
+   9 |     const { id } = await params;
+> 10 |     const project = await Project.findOne({ $or: [{ slug: id }, { _id: id }] });
+     |                     ^
+  11 |     if (!project) {
+  12 |       return NextResponse.json({ success: false, error: 'Project not found' }, { status: 404 });
+  13 |     } {
+  stringValue: '"auib-ticket-system"',
+  messageFormat: undefined,
+  kind: 'ObjectId',
+  value: 'auib-ticket-system',
+  path: '_id',
+  reason: BSONError: input must be a 24 character hex string, 12 byte Uint8Array, or an integer
+      at async GET (src\app\api\projects\[id]\route.ts:10:21)
+     8 |     await connectDB();
+     9 |     const { id } = await params;
+  > 10 |     const project = await Project.findOne({ $or: [{ slug: id }, { _id: id }] });
+       |                     ^
+    11 |     if (!project) {
+    12 |       return NextResponse.json({ success: false, error: 'Project not found' }, { status: 404 });
+    13 |     },
+  valueType: 'string'
+}
+ GET /api/projects/auib-ticket-system 500 in 146ms (compile: 8ms, render: 138ms)
+⚠ Fast Refresh had to perform a full reload due to a runtime error.
+✓ Compiled in 30ms
+ GET /project/auib-ticket-system 200 in 179ms (compile: 74ms, render: 105ms)
+Error fetching project: CastError: Cast to ObjectId failed for value "auib-ticket-system" (type string) at path "_id" for model "Project"
+    at async GET (src\app\api\projects\[id]\route.ts:10:21)
+   8 |     await connectDB();
+   9 |     const { id } = await params;
+> 10 |     const project = await Project.findOne({ $or: [{ slug: id }, { _id: id }] });
+     |                     ^
+  11 |     if (!project) {
+  12 |       return NextResponse.json({ success: false, error: 'Project not found' }, { status: 404 });
+  13 |     } {
+  stringValue: '"auib-ticket-system"',
+  messageFormat: undefined,
+  kind: 'ObjectId',
+  value: 'auib-ticket-system',
+  path: '_id',
+  reason: BSONError: input must be a 24 character hex string, 12 byte Uint8Array, or an integer
+      at async GET (src\app\api\projects\[id]\route.ts:10:21)
+     8 |     await connectDB();
+     9 |     const { id } = await params;
+  > 10 |     const project = await Project.findOne({ $or: [{ slug: id }, { _id: id }] });
+       |                     ^
+    11 |     if (!project) {
+    12 |       return NextResponse.json({ success: false, error: 'Project not found' }, { status: 404 });
+    13 |     },
+  valueType: 'string'
+}
+ GET /api/projects/auib-ticket-system 500 in 168ms (compile: 7ms, render: 160ms)
+✓ Compiled in 29ms
+ GET /project/auib-ticket-system 200 in 152ms (compile: 71ms, render: 81ms)
+Error fetching project: CastError: Cast to ObjectId failed for value "auib-ticket-system" (type string) at path "_id" for model "Project"
+    at async GET (src\app\api\projects\[id]\route.ts:10:21)
+   8 |     await connectDB();
+   9 |     const { id } = await params;
+> 10 |     const project = await Project.findOne({ $or: [{ slug: id }, { _id: id }] });
+     |                     ^
+  11 |     if (!project) {
+  12 |       return NextResponse.json({ success: false, error: 'Project not found' }, { status: 404 });
+  13 |     } {
+  stringValue: '"auib-ticket-system"',
+  messageFormat: undefined,
+  kind: 'ObjectId',
+  value: 'auib-ticket-system',
+  path: '_id',
+  reason: BSONError: input must be a 24 character hex string, 12 byte Uint8Array, or an integer
+      at async GET (src\app\api\projects\[id]\route.ts:10:21)
+     8 |     await connectDB();
+     9 |     const { id } = await params;
+  > 10 |     const project = await Project.findOne({ $or: [{ slug: id }, { _id: id }] });
+       |                     ^
+    11 |     if (!project) {
+    12 |       return NextResponse.json({ success: false, error: 'Project not found' }, { status: 404 });
+    13 |     },
+  valueType: 'string'
+}
+ GET /api/projects/auib-ticket-system 500 in 144ms (compile: 8ms, render: 136ms)
+Error fetching project: CastError: Cast to ObjectId failed for value "auib-ticket-system" (type string) at path "_id" for model "Project"
+    at async GET (src\app\api\projects\[id]\route.ts:10:21)
+   8 |     await connectDB();
+   9 |     const { id } = await params;
+> 10 |     const project = await Project.findOne({ $or: [{ slug: id }, { _id: id }] });
+     |                     ^
+  11 |     if (!project) {
+  12 |       return NextResponse.json({ success: false, error: 'Project not found' }, { status: 404 });
+  13 |     } {
+  stringValue: '"auib-ticket-system"',
+  messageFormat: undefined,
+  kind: 'ObjectId',
+  value: 'auib-ticket-system',
+  path: '_id',
+  reason: BSONError: input must be a 24 character hex string, 12 byte Uint8Array, or an integer
+      at async GET (src\app\api\projects\[id]\route.ts:10:21)
+     8 |     await connectDB();
+     9 |     const { id } = await params;
+  > 10 |     const project = await Project.findOne({ $or: [{ slug: id }, { _id: id }] });
+       |                     ^
+    11 |     if (!project) {
+    12 |       return NextResponse.json({ success: false, error: 'Project not found' }, { status: 404 });
+    13 |     },
+  valueType: 'string'
+}
+ GET /api/projects/auib-ticket-system 500 in 176ms (compile: 8ms, render: 169ms)
+ GET /project/auib-ticket-system 200 in 53ms (compile: 9ms, render: 44ms)
+ GET /api/projects/auib-ticket-system 200 in 68ms (compile: 52ms, render: 16ms)
+ GET / 200 in 27ms (compile: 7ms, render: 20ms)
+ GET /api/projects 200 in 16ms (compile: 2ms, render: 14ms)
+ GET /api/projects 200 in 11ms (compile: 2ms, render: 9ms)
+ POST /api/seed 200 in 29ms (compile: 6ms, render: 23ms)
+ GET /project/auib-ticket-system 200 in 243ms (compile: 125ms, render: 118ms)
+ GET /api/projects/auib-ticket-system 200 in 124ms (compile: 73ms, render: 51ms)
+ GET /api/comments?projectId=auib-ticket-system 200 in 137ms (compile: 115ms, render: 22ms)
+ GET /project/auib-ticket-system 200 in 53ms (compile: 11ms, render: 43ms)
+ GET /api/comments?projectId=auib-ticket-system 200 in 22ms (compile: 2ms, render: 20ms)
+ GET /api/projects/auib-ticket-system 200 in 20ms (compile: 8ms, render: 12ms)
+ GET /api/comments?projectId=6982168045cf780852c33f51 200 in 9ms (compile: 2ms, render: 7ms)
+ GET /api/comments?projectId=6982168045cf780852c33f51 200 in 8ms (compile: 2ms, render: 6ms)
+ GET /project/new 200 in 267ms (compile: 141ms, render: 126ms)
+✓ Compiled in 145ms
+✓ Compiled in 102ms
+✓ Compiled in 70ms
+✓ Compiled in 45ms
+✓ Compiled in 91ms
+✓ Compiled in 104ms
+✓ Compiled in 79ms
+✓ Compiled in 66ms
+ GET /project/new 200 in 194ms (compile: 102ms, render: 92ms)
+ GET /project/new 200 in 59ms (compile: 3ms, render: 56ms)
+ GET /project/new 200 in 33ms (compile: 3ms, render: 30ms)
+ GET / 200 in 185ms (compile: 89ms, render: 97ms)
+ GET /api/projects 200 in 14ms (compile: 2ms, render: 12ms)
+ GET / 200 in 74ms (compile: 4ms, render: 71ms)
+ GET /api/projects 200 in 13ms (compile: 2ms, render: 11ms)
+ GET /project/auib-ticket-system 200 in 220ms (compile: 105ms, render: 115ms)
+ GET /api/comments?projectId=auib-ticket-system 200 in 12ms (compile: 3ms, render: 9ms)
+ GET /api/projects/auib-ticket-system 200 in 18ms (compile: 8ms, render: 10ms)
+ GET /project/new 200 in 71ms (compile: 3ms, render: 68ms)
+✓ Compiled in 87ms
+✓ Compiled in 138ms
+ GET / 200 in 49ms (compile: 5ms, render: 44ms)
+ GET /api/projects 200 in 13ms (compile: 2ms, render: 10ms)
+ GET / 200 in 46ms (compile: 3ms, render: 43ms)
+ GET /api/projects 200 in 11ms (compile: 2ms, render: 9ms)
+✓ Compiled in 99ms
+✓ Compiled in 125ms
+ GET / 200 in 38ms (compile: 3ms, render: 35ms)
+ GET /api/projects 200 in 11ms (compile: 2ms, render: 8ms)
+ GET /project/auib-ticket-system 200 in 55ms (compile: 14ms, render: 41ms)
+ GET /api/comments?projectId=auib-ticket-system 200 in 9ms (compile: 2ms, render: 7ms)
+ GET /api/projects/auib-ticket-system 200 in 17ms (compile: 9ms, render: 9ms)
+ GET /project/new 200 in 72ms (compile: 5ms, render: 67ms)
+✓ Compiled in 70ms
+ GET /project/new 200 in 202ms (compile: 102ms, render: 99ms)
